@@ -1,0 +1,10 @@
+_format_version: "3.0"
+
+consumers:
+- username: demo-consumer
+  keyauth_credentials:
+  - key: demo-api-key-change-me
+
+- username: internal-service
+  keyauth_credentials:
+  - key: internal-service-key-change-me

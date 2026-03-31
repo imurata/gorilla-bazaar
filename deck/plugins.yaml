@@ -1,0 +1,10 @@
+_format_version: "1.0"
+add-plugins:
+- selectors:
+  - $
+  overwrite: false
+  plugins:
+  - name: key-auth
+    config:
+      key_names:
+      - X-API-Key

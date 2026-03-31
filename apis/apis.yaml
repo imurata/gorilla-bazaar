@@ -1,0 +1,18 @@
+# kongctl declarative configuration
+# Deploys the Gorilla Bazaar API to Kong Konnect API Catalog
+# Reference: https://github.com/Kong/kongctl
+
+apis:
+- ref: simple-item-api
+  name: Gorilla Bazaar API
+  description: APIOps demo API for Kong Konnect.
+  version: !file ./specs/openapi.yaml#info.version
+  labels:
+    env: production
+    team: platform
+    managed-by: apiops
+  versions:
+  - ref: v1
+    name: !file ./specs/openapi.yaml#info.version
+    version: !file ./specs/openapi.yaml#info.version
+    spec: !file ./specs/openapi.yaml
